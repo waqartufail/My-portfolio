@@ -1,626 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>Waqar Tufail</title>
-				<style>
-				 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waqar Tufail</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-header {
-    background: linear-gradient(90deg, #4bb75e, #072b7a);
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
+        header {
+            background: linear-gradient(90deg, #4bb75e, #072b7a);
+            background-image: url('https://source.unsplash.com/random/1600x900?testing');
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(90deg, #4bb75e, #072b7a);
-    flex-wrap: wrap;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(90deg, #4bb75e, #072b7a);
+            flex-wrap: wrap;
+            opacity:50%;
+        }
 
-nav a {
-    color: #fff;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    transition: background 0.3s ease, color 0.3s ease;
-}
+            nav a {
+                color: #fff;
+                padding: 14px 20px;
+                text-decoration: none;
+                text-align: center;
+                transition: background 0.3s ease, color 0.3s ease;
+            }
 
-nav a:hover {
-    background: #575757;
-    color: #ffd700;
-}
+                nav a:hover {
+                    background: #575757;
+                    color: #ffd700;
+                }
 
-.container {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-}
+        .container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
 
-section {
-    margin: 20px 0;
-    padding: 50px 20px;
-    border-radius: 10px;
-    position: relative;
-}
+        section {
+            margin: 20px 0;
+            padding: 50px 20px;
+            border-radius: 10px;
+            position: relative;
+        }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-}
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
 
-h2 {
-    color: #4bb75e;
-}
-h3{color:#54cacb}
-h4{
-	color:#42a9bb;
-	}
-	a{
-	color:#00ffff}
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-    nav a {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-}
+        h2 {
+            color: #4bb75e;
+        }
 
-.portfolio-bg, .services-bg, .domains-bg, .tools-bg, .certifications-bg, .awards-bg, .contact-bg {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-}
+        h3 {
+            color: #54cacb
+        }
 
-.watermark::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(41 217 235 / 50%);
-    z-index: 1;
-}
+        h4 {
+            color: #42a9bb;
+        }
 
-.content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    padding: 20px;
-    background: linear-gradient(270deg, #4bb75e, #072b7a);
-    border-radius: 10px;
-    animation: fadeIn 1s ease-in-out;
-}
+        a {
+            color: #00ffff
+        }
 
-.btn-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: #2c96af;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
 
-.btn-top:hover {
-    background-color: #182848;
-    transform: scale(1.1);
-}
+            nav a {
+                flex: 1 1 100%;
+                text-align: center;
+            }
+        }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-}
+        .portfolio-bg, .services-bg, .domains-bg, .tools-bg, .certifications-bg, .awards-bg, .contact-bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-.portfolio-bg {
-    background: url('portfolio-bg.jpg') no-repeat center center/cover;
-}
-.services-bg {
-    background: url('services-bg.jpg') no-repeat center center/cover;
-}
-.domains-bg {
-    background: url('domains-bg.jpg') no-repeat center center/cover;
-}
-.tools-bg {
-    background: url('tools-bg.jpg') no-repeat center center/cover;
-}
-.certifications-bg {
-    background: url('certifications-bg.jpg') no-repeat center center/cover;
-}
-.awards-bg {
-    background: url('awards-bg.jpg') no-repeat center center/cover;
-}
-.contact-bg {
-    background: url('contact-bg.jpg') no-repeat center center/cover;
-}
+        .watermark::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(41 217 235 / 50%);
+            z-index: 1;
+        }
 
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 20px;
+            background: linear-gradient(270deg, #4bb75e, #072b7a);
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+            opacity:70%;
+        }
 
-      </style>
-				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-				</head>
-				<body>
-					<header>
-						<h1>
-							<a href="https://www.linkedin.com/in/waqar-tufail-a4bb90a8/" target="_blank">Waqar Tufail</a>
-						</h1>
-						<p>SQA Manager | ISO 9001:2015 QMS | TQM | SFPC™ | BIFPC™ | Certified Automation Professional (CAP) </p>
-						<p>Tricentis TOSCA Certified | Automation | API | Lead | RPA Developer | Agile Manual, Performance and Automation Tester</p>
-						<p>
-							<i class="fas fa-envelope"></i>
-							<a href="mailto:samar4250@gmail.com">samar4250@gmail.com</a> | 
-							<i class="fab fa-whatsapp"></i>
-							<a href="https://wa.me/923343609679">+92 334 360 9679</a>
-						</p>
-					</header>
-					<nav>
-						<a href="#introduction">Intorduction</a>
-						<a href="#portfolio">Portfolio</a>
-						<a href="#services">Services</a>
-						<a href="#domains">Domains</a>
-						<a href="#tools">Tools</a>
-						<a href="#certifications">Certifications</a>
-						<a href="#awards">Awards</a>
-						<a href="#contact">Contact</a>
-					</nav>
-					<div class="container">
-						<section id="introduction" class="portfolio-bg watermark">
-							<div class="content">
-								<h2>Intorduction</h2>
-								<p>I am an experienced communicator and proven leader with a robust track record in crafting compelling messages, mentoring others, and engaging in travel experiences. With a passion for leveraging updated technology skills, I excel in both written and verbal communication, tailoring content to diverse audiences across various platforms. I am adept at fostering collaboration and driving strategic initiatives to completion, ensuring exceptional results through effective team leadership.</p>
-								<h4>
-									<strong>Communication Expertise</strong>
-								</h4>
-								<ul>
-									<li>
-										<strong>Compelling Messaging:</strong> Skilled in creating impactful content for diverse platforms, including social media, email, and other channels.
-									</li>
-									<li>
-										<strong>Audience Engagement:</strong> Proficient in engaging stakeholders and driving meaningful interactions through tailored communication strategies.
-									</li>
-									<li>
-										<strong>Detail-Oriented:</strong> Keen eye for detail ensures clear and effective communication.
-									</li>
-									<li>
-										<strong>Platforms:</strong> Experienced in leveraging multiple channels to craft and disseminate messages.
-									</li>
-								</ul>
-								<h4>
-									<strong>Leadership and Mentorship</strong>
-								</h4>
-								<ul>
-									<li>
-										<strong>Proven Leadership:</strong> Track record of motivating teams to achieve exceptional results through strategic direction and collaboration.
-									</li>
-									<li>
-										<strong>Team Collaboration:</strong> Foster a collaborative environment, leveraging diverse strengths to maximize productivity.
-									</li>
-									<li>
-										<strong>Effective Delegation:</strong> Demonstrated ability to delegate tasks efficiently and adapt to changing circumstances.
-									</li>
-									<li>
-										<strong>Mentorship:</strong> Provided multiple training sessions at organizational, university, and online levels, guiding team members through challenges.
-									</li>
-								</ul>
-								<h4>
-									<strong>Technology and Travel</strong>
-								</h4>
-								<ul>
-									<li>
-										<strong>Updated Technology Skills:</strong> Continuously seeking opportunities to leverage and enhance technology skills in professional settings.
-									</li>
-									<li>
-										<strong>Travel Experiences:</strong> Engaged in travel experiences that enrich professional and personal growth, broadening perspectives and fostering cultural awareness.
-									</li>
-								</ul>
-								<h4>
-									<strong>Key Achievements</strong>
-								</h4>
-								<ul>
-									<li>
-										<strong>Strategic Initiatives:</strong> Led and completed numerous strategic initiatives, driving organizational success.
-									</li>
-									<li>
-										<strong>Training Programs:</strong> Developed and delivered comprehensive training programs for various audiences, enhancing skills and knowledge.
-									</li>
-									<li>
-										<strong>Stakeholder Engagement:</strong> Successfully engaged a wide range of stakeholders through innovative communication strategies.
-									</li>
-								</ul>
-							</div>
-						</section>
-						<section id="portfolio" class="portfolio-bg watermark">
-							<div class="content">
-								<h2>Portfolio</h2>
-								<h3>QA Manager - 
-									<a href="https://www.enterprise64.com/" target="_blank">Enterprise64</a> (Mar 2024 - Present)
-									<span class="tenure" data-start="Feb 2024" data-end="present"></span>
-								</h3>
-								<p>Responsible for maintaining high-quality standards and continuous improvement initiatives.</p>
-								<p>As the Quality Assurance Manager, playing a critical role in upholding our commitment to delivering high-quality products or services to our customers.</p>
-								<p>By ensuring adherence to quality standards and driving continuous improvement initiatives, you contribute significantly to the success and reputation of our organization.</p>
-								<h3>Sr Managing Consultant - 
-									<a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Mar 2023 - Jan 2024)
-									<span class="tenure" data-start="Feb 2023" data-end="Jan 2024"></span>
-								</h3>
-								<ul>
-									<li>Directed QA Services Automation Team, allocation of resource.</li>
-									<li>Orchestrated on Cyber Security Project.</li>
-									<li>Analysis of the Testing scope and finalize the Automation strategy with the n-1 approach and publish/update over the confluence.</li>
-									<li>Developed complete automation project architect in which I Integrated Web to verify multiple components and expected data fetching from API using Rest Assured.</li>
-									<li>Expected values update in CMS and verify over front application using Microsoft Authentication.</li>
-									<li>Desktop device, Android Mobile device for UI verification, and Database for posting some data using Selenium Java cucumber and TestNG.</li>
-									<li>Automate Microsoft Authentication based on logged-in user.</li>
-									<li>Publish Bi-weekly regression report over confluence Directed Transact Banking Project.</li>
-									<li>Analysis of the requirement and scope finalize the Automation plan and share module-wise estimation with management.</li>
-									<li>Plan resource task allocation based on the plan.</li>
-									<li>Developed complete automation project architect in which I accomplished Integrated Web to verify multiple components and test data fetching from CSV/properties, creating multiple accounts, and application types and maintaining the segregated suites.</li>
-								</ul>
-								<h3>Managing Consultant - 
-									<a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Jul 2022 - Feb 2023)
-									<span class="tenure" data-start="Jun 2022" data-end="Feb 2023"></span>
-								</h3>
-								<ul>
-									<li>Directed QA Services Automation Team, allocation of resource.</li>
-									<li>Orchestrated on Cyber Security Project.</li>
-									<li>Analysis of the Testing scope and finalize the Automation strategy with the n-1 approach and publish/update over the confluence.</li>
-									<li>Developed complete automation project architect in which I Integrated Web to verify multiple components and expected data fetching from API using Rest Assured.</li>
-									<li>Expected values update in CMS and verify over front application using Microsoft Authentication.</li>
-									<li>Desktop device, Android Mobile device for UI verification, and Database for posting some data using Selenium Java cucumber and TestNG.</li>
-									<li>Automate Microsoft Authentication based on logged-in user.</li>
-									<li>Publish Bi-weekly regression report over confluence Directed Transact Banking Project.</li>
-									<li>Analysis of the requirement and scope finalize the Automation plan and share module-wise estimation with management.</li>
-									<li>Plan resource task allocation based on the plan.</li>
-									<li>Developed complete automation project architect in which I accomplished Integrated Web to verify multiple components and test data fetching from CSV/properties, creating multiple accounts, and application types and maintaining the segregated suites.</li>
-								</ul>
-								<h3>Principal Consultant - 
-									<a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Jan 2022 - Jun 2022)
-									<span class="tenure" data-start="Jan 2022" data-end="Jul 2022"></span>
-								</h3>
-								<ul>
-									<li>Directed Automation Team KHI Region</li>
-									<li>Orchestrated on TOSCA Automation for E-Commerce Salesforce/Demandware</li>
-									<li>Orchestrated on TOSCA Automation for E-Commerce Salesforce on multiple modules, Voucher, Product categories, Product Detail, Cart Page, Shipping, Order placement, and Order Confirmation.</li>
-									<li>Orchestrated on Load Testing for E-Commerce Salesforce using JMeter based on traffic on the storefront and analyzed on which page the maximum load should be catered.</li>
-									<li>Orchestrated on Performance Testing using JMeter on Flight Scheduling where the load was analyzed after having complete flight arrival and takeoff details.</li>
-									<li>During sales season analyzed the E-Commerce Demandware application traffic developed a performance test strategy and shared the plan with the client.</li>
-								</ul>
-								<h3>QA Advisory - 
-									<a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Jul 2019 - Dec 2021)
-									<span class="tenure" data-start="Jun 2019" data-end="Dec 2021"></span>
-								</h3>
-								<ul>
-									<li>Orchestrated on TOSCA Automation for E-Commerce Salesforce/Demandware</li>
-									<li>Orchestrated on TOSCA Automation for E-Commerce Salesforce on multiple modules, Vouchers, Product categories, Product Details, Cart Page, Shipping, Order placement and Order Confirmation</li>
-									<li>Orchestrated on Load Testing for E-Commerce Salesforce using JMeter based on traffic on the storefront and analyzed on which page the maximum load should be catered</li>
-									<li>Orchestrated on Performance Testing using JMeter on Flight Scheduling where load was analyzed after having complete flight arrival and takeoff details</li>
-									<li>During sales season analyzed the E-Commerce Demandware application traffic developed a performance test strategy and shared the plan with the client</li>
-								</ul>
-								<h3>Senior QA - 
-									<a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Mar 2017 - Jun 2019)
-									<span class="tenure" data-start="Feb 2017" data-end="Jun 2019"></span>
-								</h3>
-								<ul>
-									<li>Orchestrated on Road and Transport Authority workflow automation project in which verified functional test cases, multiple components, and test data fetching from CSV/excel, creating multiple accounts, and application types and maintaining the segregated suites.</li>
-									<li>Automate the SOAP API workflows to complete the process using SOAP.</li>
-									<li>Deployed and executed Automation project on Integration environment.</li>
-									<li>Deployed and executed on the UAT environment.</li>
-									<li>Orchestrated on Road and Transport Authority workflow from customer portal to CRM automation project in which verified functional test cases, multiple components, and test data fetching from CSV/excel, creating multiple accounts, and application types, and maintaining the segregated suites.</li>
-									<li>Deployed and executed Automation project on Integration environment.</li>
-									<li>Deployed and executed on UAT environment and demo to client.</li>
-									<li>Orchestrated on Performance Testing using JMeter on Road ad Transport Authority for customer portal to CRM to analyze the load of the customer portal.</li>
-									<li>Orchestrated on Telecommunication internal processes workflow automation project in which verified functional test cases, multiple components, and test data fetching from CSV/excel, creating multiple accounts, and application types, and maintaining the segregated suites using UFT.</li>
-									<li>Automate the SOAP APIs for reflection of Internet Data balance and award package.</li>
-								</ul>
-								<h3>QA Engineer - 
-									<a href="https://pral.com.pk/" target="_blank">Pakistan Revenue Automation Pvt Limited</a> (Mar 2014 - Oct 2015)
-									<span class="tenure" data-start="Feb 2014" data-end="Oct 2015></span>
-								</h3>
-								<ul>
-									<li>
-										<p>Orchestrated manually Import-Export workflow project in which verified functional test cases, multiple workflows from vessel registration to complete shipment import/export.</p>
-									</li>
-								</ul>
-								<!-- Add more portfolio items as needed -->
-							</div>
-						</section>
-						<section id="services" class="services-bg watermark">
-							<div class="content">
-								<h2>Services</h2>
-								<ul>
-									<li>
-										<strong>Management:</strong> Pre Sales for winning the projects to handle the client technically.
-									</li>
-									<li>
-										<strong>QA Management:</strong> Leading QA teams and ensuring adherence to quality standards.
-									</li>
-									<li>
-										<strong>RPA Development:</strong> Implementing robotic process automation using UI Path and Automation Anywhere.
-									</li>
-									<li>
-										<strong>Automation Testing:</strong> Developing automation frameworks using tools like Selenium, TOSCA, and JMeter.
-									</li>
-									<li>
-										<strong>API Testing:</strong> Testing REST and SOAP APIs using Postman, Rest Assured, and Karate.
-									</li>
-									<li>
-										<strong>Performance Testing:</strong> Conducting load and performance testing for web and mobile applications.
-									</li>
-									<li>
-										<strong>Manual Testing:</strong> Comprehensive coverage from requirement analysis to delivery release.
-									</li>
-								</ul>
-							</div>
-						</section>
-						<section id="domains" class="domains-bg watermark">
-							<div class="content">
-								<h2>Domain Expertise</h2>
-								<ul>
-									<li>
-										<strong>Import Export:</strong> Experienced in automating and optimizing import-export operations and workflows.
-									</li>
-									<li>
-										<strong>Health Management System:</strong> Worked for a Dubai-based client on automating and enhancing a health management system.
-									</li>
-									<li>
-										<strong>Mortgage:</strong> Implemented robotic process automation (RPA) using UI Path and Automation Anywhere for mortgage processing.
-									</li>
-									<li>
-										<strong>Telecommunication:</strong> Developed automation frameworks using tools like Selenium and JMeter for telecommunication projects.
-									</li>
-									<li>
-										<strong>Road and Transport Authority:</strong> Developed automation frameworks using Selenium BDD Cucumber and tested REST and SOAP APIs using Postman, Rest Assured, and Karate for the Road and Transport Authority.
-									</li>
-									<li>
-										<strong>Airline Arrival Information System:</strong> Conducted load and performance testing for web and mobile applications in the airline industry.
-									</li>
-									<li>
-										<strong>E-Commerce:</strong> Provided comprehensive coverage from requirement analysis to delivery release for e-commerce platforms using Salesforce. Automated with TOSCA.
-									</li>
-								</ul>
-							</div>
-						</section>
-						<section id="tools" class="tools-bg watermark">
-							<div class="content">
-								<h2>Tools Knowledge</h2>
-								<ul>
-									<h3>
-										<strong>Test Cases</strong>
-									</h3>
-									<li>
-										<strong>Word:</strong> Proficient in documenting and managing test cases using Microsoft Word.
-									</li>
-									<li>
-										<strong>Excel:</strong> Skilled in organizing and tracking test cases efficiently with Microsoft Excel.
-									</li>
-									<li>
-										<strong>TestRail:</strong> Experienced in test case management and execution using TestRail.
-									</li>
-									<li>
-										<strong>QTest:</strong> Proficient in test case management and execution with QTest.
-									</li>
-								</ul>
-								<ul>
-									<h3>
-										<strong>API</strong>
-									</h3>
-									<li>
-										<strong>SOAP UI</strong> Extensive experience and in-depth knowledge in using SOAP UI for web service testing.
-									</li>
-									<li>
-										<strong>POSTMAN</strong> Proficient in utilizing Postman for comprehensive API testing and automation.
-									</li>
-									<li>
-										<strong>JMeter</strong> Skilled in leveraging JMeter for effective API automation and performance testing.
-									</li>
-									<li>
-										<strong>REST Assured</strong> Proficient in leveraging Rest Assured for comprehensive API testing and validation in Java environments.
-									</li>
-									<li>
-										<strong>Karate</strong> Experienced in utilizing the Karate framework for efficient API testing, automation, and behavior-driven development (BDD) scenarios.
-									</li>
-								</ul>
-								<ul>
-									<h3>
-										<strong>Automation</strong>
-									</h3>
-									<li>
-										<strong>Selenium WebDriver:</strong> Extensive experience and in-depth knowledge in using Selenium WebDriver for web UI automation.
-									</li>
-									<li>
-										<strong>TestNG:</strong> Proficient in utilizing TestNG for comprehensive test management and execution.
-									</li>
-									<li>
-										<strong>Cucumber BDD:</strong> Skilled in leveraging Cucumber BDD for behavior-driven development and test automation.
-									</li>
-									<li>
-										<strong>APPIUM:</strong> Experienced in mobile test automation using APPIUM.
-									</li>
-									<li>
-										<strong>WinApp:</strong> Proficient in automating Windows applications.
-									</li>
-									<li>
-										<strong>Katalon Studio:</strong> Experienced in test automation using Katalon Studio.
-									</li>
-									<li>
-										<strong>TOSCA:</strong> Proficient in test automation with TOSCA.
-									</li>
-									<li>
-										<strong>TestComplete:</strong> Experienced in using TestComplete for automated testing.
-									</li>
-									<li>
-										<strong>Renrox:</strong> Skilled in leveraging Renrox for test automation.
-									</li>
-									<li>
-										<strong>Cypress:</strong> Experienced in test automation using Cypress.
-									</li>
-									<li>
-										<strong>Playwright:</strong> Proficient in leveraging Playwright for test automation.
-									</li>
-								</ul>
-								<ul>
-									<h3>
-										<strong>Robotic Process Automation</strong>
-									</h3>
-									<li>
-										<strong>UI Path</strong> Experienced in robotic process automation (RPA) using UI Path.
-									</li>
-								</ul>
-								<ul>
-									<h3>
-										<strong>Test Management</strong>
-									</h3>
-									<li>
-										<strong>JIRA:</strong> Proficient in utilizing JIRA for comprehensive test case management and issue tracking.
-									</li>
-									<li>
-										<strong>AZURE:</strong> Experienced in test case management and collaboration using Azure DevOps.
-									</li>
-									<li>
-										<strong>TFS:</strong> Skilled in utilizing Microsoft Team Foundation Server (TFS) for test management and version control.
-									</li>
-								</ul>
-							</div>
-						</section>
-						<section id="certifications" class="certifications-bg watermark">
-							<div class="content">
-								<h2>Certifications</h2>
-								<ul>
-									<li>
-										<a href="https://techedge.techcanvass.co/Certificate/MTM5MzM2LTgx/Login.aspx">Agile Manual and Automation Testing</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1PRAqHX_O0-RJruabA0VDZzp1mT7JoPbZ/view?usp=sharing">SCRUM FOUNDATION PROFESSIONAL CERTIFICATE SFPC™</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1hJO-KqbhXpp4uF6IpidS6sCZpf16wjho/view?usp=sharing">BUSINESS INTELLIGENCE FOUNDATION PROFESSIONAL CERTIFICATION BIFPC™</a>
-									</li>
-									<li>
-										<a href="https://verify.skilljar.com/c/c3pwnhdkt8wz">Tricentis TOSCA Automation Specialist Level 1</a>
-									</li>
-									<li>
-										<a href="https://verify.skilljar.com/c/pn8ex7tvfni8">Tricentis TOSCA Automation Specialist Level 2</a>
-									</li>
-									<li>
-										<a href="https://verify.skilljar.com/c/jnx5awghbidd">Automation Specialist API</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1xpWsCSWab2f8DyZLjCnD_FGp9XYiHdYC/view?usp=sharing">Exploring Service APIs through Test Automation</a>
-									</li>
-									<li>
-										<a href="https://verify.skilljar.com/c/q6p2kp76o59c">Automation Specialist Database</a>
-									</li>
-									<li>
-										<a href="https://testautomationu.applitools.com/certificate/?id=1f8ce598">Selenium Web/Mobile using Java</a>
-									</li>
-									<li>
-										<a href="https://testautomationu.applitools.com/certificate/?id=7cbae677">Cypress</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1bpfhHKLQMkCDbHNqv-oxgHoJfFkRuE5U/view?usp=sharing">PyTest</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1oqD3Wf7lGckD1Xd4G-6D32VUkvtENeCU/view?usp=sharing">RPA – UI Path</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1XbGqOPhFWtTvb1qKqCWTT-Q9G_Ac7e-Q/view?usp=sharing">Introduction to Ethical Hacking</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1ya3cPQXiC3JKTGWXEnzHEsEtfAqBaU4u/view?usp=sharing">Artificial Intelligence Fundamentals</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1jkooF_McncdZMUByfL4w6YnJy4G7ji-F/view?usp=sharing">Quality Management</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1hO1cDPfM74CrJhLhaTiLknd2zSK0xnrZ/view?usp=sharing">Project Quality Management</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1NyQuUnoQ5_gsuYqjwa6FKiPWkF9AmExS/view?usp=sharing">Principles of Leadership</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1kDqO62TilXyye_wqH7K67_w6s9plHJgF/view?usp=sharing">Master Course in Generative AI (Artificial Intelligence)</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1CeXpQabbRW8c5c9RuE5fKekhBLOR8ZOT/view?usp=sharing">Conflict Management</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/1tm03tnnt7L6275ZP-GT0L8BXJKmU13pj/view?usp=sharing">ISO 9001:2015 - Quality Management System (QMS)</a>
-									</li>
-									<li>
-										<a href="https://drive.google.com/file/d/17uSnVkrMwGT8DN-PACb85vJjqPkA4B95/view?usp=sharing">Understanding Cost of Quality and TQM Tools</a>
-									</li>
-								</ul>
-							</div>
-						</section>
-						<section id="awards" class="awards-bg watermark">
-							<div class="content">
-								<h2>Awards</h2>
-								<ul>
-									<li>Employee of the Month - Aug 2017</li>
-									<li>Best Initiative - 2019</li>
-									<li>Bug Free Delivery By Client</li>
-									<li>Employee of the Year - 2020</li>
-								</ul>
-							</div>
-						</section>
-						<section id="contact" class="contact-bg watermark">
-							<div class="content">
-								<h2>Contact</h2>
-								<p>
-									<i class="fas fa-envelope"></i>
-									<a href="mailto:samar4250@gmail.com">Email Me</a>
-								</p>
-								<p>
-									<i class="fas fa-phone"></i>
-									<a href="tel:+923343609679">Call Me</a>
-								</p>
-								<p>
-									<i class="fab fa-whatsapp"></i>
-									<a href="https://wa.me/923343609679">WhatsApp Me</a>
-								</p>
-								<p>
-									<i class="fab fa-linkedin"></i>
-									<a href="https://www.linkedin.com/in/waqar-tufail-a4bb90a8" target="_blank">My LinkedIn</a>
-								</p>
-							</div>
-						</section>
-					</div>
-					<footer>
-						<p>&copy; 2024 Waqar Tufail. All rights reserved.</p>
-					</footer>
-					<button class="btn-top" onclick="topFunction()">Top</button>
-					<script>
-        window.onscroll = function() {scrollFunction()};
+        .btn-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #2c96af;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+            .btn-top:hover {
+                background-color: #182848;
+                transform: scale(1.1);
+            }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .introduction-bg {
+            background-image: url('https://source.unsplash.com/random/1600x900?leader');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .portfolio-bg {
+            background-image: url('https://source.unsplash.com/random/1600x900?professional');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .services-bg {
+            background: url('services-bg.jpg') no-repeat center center/cover;
+        }
+
+        .domains-bg {
+            background-image: url('https://source.unsplash.com/random/1600x900?expertise');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .tools-bg {
+            background-image: url('https://source.unsplash.com/random/1600x900?tools');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .certifications-bg {
+            background-image: url('https://source.unsplash.com/random/1600x900?certificates');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .awards-bg {
+            background-image: url('https://source.unsplash.com/random/1600x900?awards');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .contact-bg {
+            background-image: url('https://source.unsplash.com/random/1600x900?contact');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+            .slide img {
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+
+        .text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .slide h1, .slide h2 {
+            margin: 0 0 10px;
+        }
+
+        .slide p {
+            margin: 0 0 5px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="https://www.linkedin.com/in/waqar-tufail-a4bb90a8/" target="_blank">Waqar Tufail</a>
+        </h1>
+        <p>SQA Manager | ISO 9001:2015 QMS | TQM | SFPC™ | BIFPC™ | Certified Automation Professional (CAP) </p>
+        <p>Tricentis TOSCA Certified | Automation | API | Lead | RPA Developer | Agile Manual, Performance and Automation Tester</p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:samar4250@gmail.com">samar4250@gmail.com</a> |
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/923343609679">+92 334 360 9679</a>
+        </p>
+    </header>
+    <nav>
+        <a href="#introduction">Intorduction</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#domains">Domains</a>
+        <a href="#tools">Tools</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        
+        <section id="introduction" class="introduction-bg watermark">
+            <div class="content">
+                <h2>Intorduction</h2>
+                <p>I am an experienced communicator and proven leader with a robust track record in crafting compelling messages, mentoring others, and engaging in travel experiences. With a passion for leveraging updated technology skills, I excel in both written and verbal communication, tailoring content to diverse audiences across various platforms. I am adept at fostering collaboration and driving strategic initiatives to completion, ensuring exceptional results through effective team leadership.</p>
+                <h4>
+                    <strong>Communication Expertise</strong>
+                </h4>
+                <ul>
+                    <li>
+                        <strong>Compelling Messaging:</strong> Skilled in creating impactful content for diverse platforms, including social media, email, and other channels.
+                    </li>
+                    <li>
+                        <strong>Audience Engagement:</strong> Proficient in engaging stakeholders and driving meaningful interactions through tailored communication strategies.
+                    </li>
+                    <li>
+                        <strong>Detail-Oriented:</strong> Keen eye for detail ensures clear and effective communication.
+                    </li>
+                    <li>
+                        <strong>Platforms:</strong> Experienced in leveraging multiple channels to craft and disseminate messages.
+                    </li>
+                </ul>
+                <h4>
+                    <strong>Leadership and Mentorship</strong>
+                </h4>
+                <ul>
+                    <li>
+                        <strong>Proven Leadership:</strong> Track record of motivating teams to achieve exceptional results through strategic direction and collaboration.
+                    </li>
+                    <li>
+                        <strong>Team Collaboration:</strong> Foster a collaborative environment, leveraging diverse strengths to maximize productivity.
+                    </li>
+                    <li>
+                        <strong>Effective Delegation:</strong> Demonstrated ability to delegate tasks efficiently and adapt to changing circumstances.
+                    </li>
+                    <li>
+                        <strong>Mentorship:</strong> Provided multiple training sessions at organizational, university, and online levels, guiding team members through challenges.
+                    </li>
+                </ul>
+                <h4>
+                    <strong>Technology and Travel</strong>
+                </h4>
+                <ul>
+                    <li>
+                        <strong>Updated Technology Skills:</strong> Continuously seeking opportunities to leverage and enhance technology skills in professional settings.
+                    </li>
+                    <li>
+                        <strong>Travel Experiences:</strong> Engaged in travel experiences that enrich professional and personal growth, broadening perspectives and fostering cultural awareness.
+                    </li>
+                </ul>
+                <h4>
+                    <strong>Key Achievements</strong>
+                </h4>
+                <ul>
+                    <li>
+                        <strong>Strategic Initiatives:</strong> Led and completed numerous strategic initiatives, driving organizational success.
+                    </li>
+                    <li>
+                        <strong>Training Programs:</strong> Developed and delivered comprehensive training programs for various audiences, enhancing skills and knowledge.
+                    </li>
+                    <li>
+                        <strong>Stakeholder Engagement:</strong> Successfully engaged a wide range of stakeholders through innovative communication strategies.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="portfolio" class="portfolio-bg watermark">
+            <div class="content">
+                <h2>Portfolio</h2>
+                <h3>
+                    QA Manager -
+                    <a href="https://www.enterprise64.com/" target="_blank">Enterprise64</a> (Mar 2024 - Present)
+                    <span class="tenure" data-start="Feb 2024" data-end="present"></span>
+                </h3>
+                <p>Responsible for maintaining high-quality standards and continuous improvement initiatives.</p>
+                <p>As the Quality Assurance Manager, playing a critical role in upholding our commitment to delivering high-quality products or services to our customers.</p>
+                <p>By ensuring adherence to quality standards and driving continuous improvement initiatives, you contribute significantly to the success and reputation of our organization.</p>
+                <h3>
+                    Sr Managing Consultant -
+                    <a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Mar 2023 - Jan 2024)
+                    <span class="tenure" data-start="Feb 2023" data-end="Jan 2024"></span>
+                </h3>
+                <ul>
+                    <li>Directed QA Services Automation Team, allocation of resource.</li>
+                    <li>Orchestrated on Cyber Security Project.</li>
+                    <li>Analysis of the Testing scope and finalize the Automation strategy with the n-1 approach and publish/update over the confluence.</li>
+                    <li>Developed complete automation project architect in which I Integrated Web to verify multiple components and expected data fetching from API using Rest Assured.</li>
+                    <li>Expected values update in CMS and verify over front application using Microsoft Authentication.</li>
+                    <li>Desktop device, Android Mobile device for UI verification, and Database for posting some data using Selenium Java cucumber and TestNG.</li>
+                    <li>Automate Microsoft Authentication based on logged-in user.</li>
+                    <li>Publish Bi-weekly regression report over confluence Directed Transact Banking Project.</li>
+                    <li>Analysis of the requirement and scope finalize the Automation plan and share module-wise estimation with management.</li>
+                    <li>Plan resource task allocation based on the plan.</li>
+                    <li>Developed complete automation project architect in which I accomplished Integrated Web to verify multiple components and test data fetching from CSV/properties, creating multiple accounts, and application types and maintaining the segregated suites.</li>
+                </ul>
+                <h3>
+                    Managing Consultant -
+                    <a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Jul 2022 - Feb 2023)
+                    <span class="tenure" data-start="Jun 2022" data-end="Feb 2023"></span>
+                </h3>
+                <ul>
+                    <li>Directed QA Services Automation Team, allocation of resource.</li>
+                    <li>Orchestrated on Cyber Security Project.</li>
+                    <li>Analysis of the Testing scope and finalize the Automation strategy with the n-1 approach and publish/update over the confluence.</li>
+                    <li>Developed complete automation project architect in which I Integrated Web to verify multiple components and expected data fetching from API using Rest Assured.</li>
+                    <li>Expected values update in CMS and verify over front application using Microsoft Authentication.</li>
+                    <li>Desktop device, Android Mobile device for UI verification, and Database for posting some data using Selenium Java cucumber and TestNG.</li>
+                    <li>Automate Microsoft Authentication based on logged-in user.</li>
+                    <li>Publish Bi-weekly regression report over confluence Directed Transact Banking Project.</li>
+                    <li>Analysis of the requirement and scope finalize the Automation plan and share module-wise estimation with management.</li>
+                    <li>Plan resource task allocation based on the plan.</li>
+                    <li>Developed complete automation project architect in which I accomplished Integrated Web to verify multiple components and test data fetching from CSV/properties, creating multiple accounts, and application types and maintaining the segregated suites.</li>
+                </ul>
+                <h3>
+                    Principal Consultant -
+                    <a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Jan 2022 - Jun 2022)
+                    <span class="tenure" data-start="Jan 2022" data-end="Jul 2022"></span>
+                </h3>
+                <ul>
+                    <li>Directed Automation Team KHI Region</li>
+                    <li>Orchestrated on TOSCA Automation for E-Commerce Salesforce/Demandware</li>
+                    <li>Orchestrated on TOSCA Automation for E-Commerce Salesforce on multiple modules, Voucher, Product categories, Product Detail, Cart Page, Shipping, Order placement, and Order Confirmation.</li>
+                    <li>Orchestrated on Load Testing for E-Commerce Salesforce using JMeter based on traffic on the storefront and analyzed on which page the maximum load should be catered.</li>
+                    <li>Orchestrated on Performance Testing using JMeter on Flight Scheduling where the load was analyzed after having complete flight arrival and takeoff details.</li>
+                    <li>During sales season analyzed the E-Commerce Demandware application traffic developed a performance test strategy and shared the plan with the client.</li>
+                </ul>
+                <h3>
+                    QA Advisory -
+                    <a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Jul 2019 - Dec 2021)
+                    <span class="tenure" data-start="Jun 2019" data-end="Dec 2021"></span>
+                </h3>
+                <ul>
+                    <li>Orchestrated on TOSCA Automation for E-Commerce Salesforce/Demandware</li>
+                    <li>Orchestrated on TOSCA Automation for E-Commerce Salesforce on multiple modules, Vouchers, Product categories, Product Details, Cart Page, Shipping, Order placement and Order Confirmation</li>
+                    <li>Orchestrated on Load Testing for E-Commerce Salesforce using JMeter based on traffic on the storefront and analyzed on which page the maximum load should be catered</li>
+                    <li>Orchestrated on Performance Testing using JMeter on Flight Scheduling where load was analyzed after having complete flight arrival and takeoff details</li>
+                    <li>During sales season analyzed the E-Commerce Demandware application traffic developed a performance test strategy and shared the plan with the client</li>
+                </ul>
+                <h3>
+                    Senior QA -
+                    <a href="https://systemsltd.com/PK" target="_blank">Systems Limited</a> (Mar 2017 - Jun 2019)
+                    <span class="tenure" data-start="Feb 2017" data-end="Jun 2019"></span>
+                </h3>
+                <ul>
+                    <li>Orchestrated on Road and Transport Authority workflow automation project in which verified functional test cases, multiple components, and test data fetching from CSV/excel, creating multiple accounts, and application types and maintaining the segregated suites.</li>
+                    <li>Automate the SOAP API workflows to complete the process using SOAP.</li>
+                    <li>Deployed and executed Automation project on Integration environment.</li>
+                    <li>Deployed and executed on the UAT environment.</li>
+                    <li>Orchestrated on Road and Transport Authority workflow from customer portal to CRM automation project in which verified functional test cases, multiple components, and test data fetching from CSV/excel, creating multiple accounts, and application types, and maintaining the segregated suites.</li>
+                    <li>Deployed and executed Automation project on Integration environment.</li>
+                    <li>Deployed and executed on UAT environment and demo to client.</li>
+                    <li>Orchestrated on Performance Testing using JMeter on Road ad Transport Authority for customer portal to CRM to analyze the load of the customer portal.</li>
+                    <li>Orchestrated on Telecommunication internal processes workflow automation project in which verified functional test cases, multiple components, and test data fetching from CSV/excel, creating multiple accounts, and application types, and maintaining the segregated suites using UFT.</li>
+                    <li>Automate the SOAP APIs for reflection of Internet Data balance and award package.</li>
+                </ul>
+                <h3>
+                    QA Engineer -
+                    <a href="https://pral.com.pk/" target="_blank">Pakistan Revenue Automation Pvt Limited</a> (Mar 2014 - Oct 2015)
+                    <span class="tenure" data-start="Feb 2014" data-end="Oct 2015></span>
+                </h3>
+                <ul>
+                    <li>
+                        <p>Orchestrated manually Import-Export workflow project in which verified functional test cases, multiple workflows from vessel registration to complete shipment import/export.</p>
+                    </li>
+                </ul>
+                <!-- Add more portfolio items as needed -->
+            </div>
+        </section>
+        <section id="services" class="services-bg watermark">
+            <div class="content">
+                <h2>Services</h2>
+                <ul>
+                    <li>
+                        <strong>Management:</strong> Pre Sales for winning the projects to handle the client technically.
+                    </li>
+                    <li>
+                        <strong>QA Management:</strong> Leading QA teams and ensuring adherence to quality standards.
+                    </li>
+                    <li>
+                        <strong>RPA Development:</strong> Implementing robotic process automation using UI Path and Automation Anywhere.
+                    </li>
+                    <li>
+                        <strong>Automation Testing:</strong> Developing automation frameworks using tools like Selenium, TOSCA, and JMeter.
+                    </li>
+                    <li>
+                        <strong>API Testing:</strong> Testing REST and SOAP APIs using Postman, Rest Assured, and Karate.
+                    </li>
+                    <li>
+                        <strong>Performance Testing:</strong> Conducting load and performance testing for web and mobile applications.
+                    </li>
+                    <li>
+                        <strong>Manual Testing:</strong> Comprehensive coverage from requirement analysis to delivery release.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="domains" class="domains-bg watermark">
+            <div class="content">
+                <h2>Domain Expertise</h2>
+                <ul>
+                    <li>
+                        <strong>Import Export:</strong> Experienced in automating and optimizing import-export operations and workflows.
+                    </li>
+                    <li>
+                        <strong>Health Management System:</strong> Worked for a Dubai-based client on automating and enhancing a health management system.
+                    </li>
+                    <li>
+                        <strong>Mortgage:</strong> Implemented robotic process automation (RPA) using UI Path and Automation Anywhere for mortgage processing.
+                    </li>
+                    <li>
+                        <strong>Telecommunication:</strong> Developed automation frameworks using tools like Selenium and JMeter for telecommunication projects.
+                    </li>
+                    <li>
+                        <strong>Road and Transport Authority:</strong> Developed automation frameworks using Selenium BDD Cucumber and tested REST and SOAP APIs using Postman, Rest Assured, and Karate for the Road and Transport Authority.
+                    </li>
+                    <li>
+                        <strong>Airline Arrival Information System:</strong> Conducted load and performance testing for web and mobile applications in the airline industry.
+                    </li>
+                    <li>
+                        <strong>E-Commerce:</strong> Provided comprehensive coverage from requirement analysis to delivery release for e-commerce platforms using Salesforce. Automated with TOSCA.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="tools" class="tools-bg watermark">
+            <div class="content">
+                <h2>Tools Knowledge</h2>
+                <ul>
+                    <h3>
+                        <strong>Test Cases</strong>
+                    </h3>
+                    <li>
+                        <strong>Word:</strong> Proficient in documenting and managing test cases using Microsoft Word.
+                    </li>
+                    <li>
+                        <strong>Excel:</strong> Skilled in organizing and tracking test cases efficiently with Microsoft Excel.
+                    </li>
+                    <li>
+                        <strong>TestRail:</strong> Experienced in test case management and execution using TestRail.
+                    </li>
+                    <li>
+                        <strong>QTest:</strong> Proficient in test case management and execution with QTest.
+                    </li>
+                </ul>
+                <ul>
+                    <h3>
+                        <strong>API</strong>
+                    </h3>
+                    <li>
+                        <strong>SOAP UI</strong> Extensive experience and in-depth knowledge in using SOAP UI for web service testing.
+                    </li>
+                    <li>
+                        <strong>POSTMAN</strong> Proficient in utilizing Postman for comprehensive API testing and automation.
+                    </li>
+                    <li>
+                        <strong>JMeter</strong> Skilled in leveraging JMeter for effective API automation and performance testing.
+                    </li>
+                    <li>
+                        <strong>REST Assured</strong> Proficient in leveraging Rest Assured for comprehensive API testing and validation in Java environments.
+                    </li>
+                    <li>
+                        <strong>Karate</strong> Experienced in utilizing the Karate framework for efficient API testing, automation, and behavior-driven development (BDD) scenarios.
+                    </li>
+                </ul>
+                <ul>
+                    <h3>
+                        <strong>Automation</strong>
+                    </h3>
+                    <li>
+                        <strong>Selenium WebDriver:</strong> Extensive experience and in-depth knowledge in using Selenium WebDriver for web UI automation.
+                    </li>
+                    <li>
+                        <strong>TestNG:</strong> Proficient in utilizing TestNG for comprehensive test management and execution.
+                    </li>
+                    <li>
+                        <strong>Cucumber BDD:</strong> Skilled in leveraging Cucumber BDD for behavior-driven development and test automation.
+                    </li>
+                    <li>
+                        <strong>APPIUM:</strong> Experienced in mobile test automation using APPIUM.
+                    </li>
+                    <li>
+                        <strong>WinApp:</strong> Proficient in automating Windows applications.
+                    </li>
+                    <li>
+                        <strong>Katalon Studio:</strong> Experienced in test automation using Katalon Studio.
+                    </li>
+                    <li>
+                        <strong>TOSCA:</strong> Proficient in test automation with TOSCA.
+                    </li>
+                    <li>
+                        <strong>TestComplete:</strong> Experienced in using TestComplete for automated testing.
+                    </li>
+                    <li>
+                        <strong>Renrox:</strong> Skilled in leveraging Renrox for test automation.
+                    </li>
+                    <li>
+                        <strong>Cypress:</strong> Experienced in test automation using Cypress.
+                    </li>
+                    <li>
+                        <strong>Playwright:</strong> Proficient in leveraging Playwright for test automation.
+                    </li>
+                </ul>
+                <ul>
+                    <h3>
+                        <strong>Robotic Process Automation</strong>
+                    </h3>
+                    <li>
+                        <strong>UI Path</strong> Experienced in robotic process automation (RPA) using UI Path.
+                    </li>
+                </ul>
+                <ul>
+                    <h3>
+                        <strong>Test Management</strong>
+                    </h3>
+                    <li>
+                        <strong>JIRA:</strong> Proficient in utilizing JIRA for comprehensive test case management and issue tracking.
+                    </li>
+                    <li>
+                        <strong>AZURE:</strong> Experienced in test case management and collaboration using Azure DevOps.
+                    </li>
+                    <li>
+                        <strong>TFS:</strong> Skilled in utilizing Microsoft Team Foundation Server (TFS) for test management and version control.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="certifications" class="certifications-bg watermark">
+            <div class="content">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>
+                        <a href="https://techedge.techcanvass.co/Certificate/MTM5MzM2LTgx/Login.aspx">Agile Manual and Automation Testing</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1PRAqHX_O0-RJruabA0VDZzp1mT7JoPbZ/view?usp=sharing">SCRUM FOUNDATION PROFESSIONAL CERTIFICATE SFPC™</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1hJO-KqbhXpp4uF6IpidS6sCZpf16wjho/view?usp=sharing">BUSINESS INTELLIGENCE FOUNDATION PROFESSIONAL CERTIFICATION BIFPC™</a>
+                    </li>
+                    <li>
+                        <a href="https://verify.skilljar.com/c/c3pwnhdkt8wz">Tricentis TOSCA Automation Specialist Level 1</a>
+                    </li>
+                    <li>
+                        <a href="https://verify.skilljar.com/c/pn8ex7tvfni8">Tricentis TOSCA Automation Specialist Level 2</a>
+                    </li>
+                    <li>
+                        <a href="https://verify.skilljar.com/c/jnx5awghbidd">Automation Specialist API</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1xpWsCSWab2f8DyZLjCnD_FGp9XYiHdYC/view?usp=sharing">Exploring Service APIs through Test Automation</a>
+                    </li>
+                    <li>
+                        <a href="https://verify.skilljar.com/c/q6p2kp76o59c">Automation Specialist Database</a>
+                    </li>
+                    <li>
+                        <a href="https://testautomationu.applitools.com/certificate/?id=1f8ce598">Selenium Web/Mobile using Java</a>
+                    </li>
+                    <li>
+                        <a href="https://testautomationu.applitools.com/certificate/?id=7cbae677">Cypress</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1bpfhHKLQMkCDbHNqv-oxgHoJfFkRuE5U/view?usp=sharing">PyTest</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1oqD3Wf7lGckD1Xd4G-6D32VUkvtENeCU/view?usp=sharing">RPA – UI Path</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1XbGqOPhFWtTvb1qKqCWTT-Q9G_Ac7e-Q/view?usp=sharing">Introduction to Ethical Hacking</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1ya3cPQXiC3JKTGWXEnzHEsEtfAqBaU4u/view?usp=sharing">Artificial Intelligence Fundamentals</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1jkooF_McncdZMUByfL4w6YnJy4G7ji-F/view?usp=sharing">Quality Management</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1hO1cDPfM74CrJhLhaTiLknd2zSK0xnrZ/view?usp=sharing">Project Quality Management</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1NyQuUnoQ5_gsuYqjwa6FKiPWkF9AmExS/view?usp=sharing">Principles of Leadership</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1kDqO62TilXyye_wqH7K67_w6s9plHJgF/view?usp=sharing">Master Course in Generative AI (Artificial Intelligence)</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1CeXpQabbRW8c5c9RuE5fKekhBLOR8ZOT/view?usp=sharing">Conflict Management</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1tm03tnnt7L6275ZP-GT0L8BXJKmU13pj/view?usp=sharing">ISO 9001:2015 - Quality Management System (QMS)</a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/17uSnVkrMwGT8DN-PACb85vJjqPkA4B95/view?usp=sharing">Understanding Cost of Quality and TQM Tools</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="awards" class="awards-bg watermark">
+            <div class="content">
+                <h2>Awards</h2>
+                <ul>
+                    <li>Employee of the Month - Aug 2017</li>
+                    <li>Best Initiative - 2019</li>
+                    <li>Bug Free Delivery By Client</li>
+                    <li>Employee of the Year - 2020</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact" class="contact-bg watermark">
+            <div class="content">
+                <h2>Contact</h2>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:samar4250@gmail.com">Email Me</a>
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+923343609679">Call Me</a>
+                </p>
+                <p>
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/923343609679">WhatsApp Me</a>
+                </p>
+                <p>
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/waqar-tufail-a4bb90a8" target="_blank">My LinkedIn</a>
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    <button class="btn-top" onclick="topFunction()">Top</button>
+    <script>
+        window.onscroll = function () { scrollFunction() };
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 document.querySelector(".btn-top").style.display = "block";
@@ -633,7 +734,7 @@ h4{
             document.documentElement.scrollTop = 0;
         }
     </script>
-					<script>
+    <script>
         function calculateTimeDifference(startDate, endDate) {
             const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             const startParts = startDate.split(' ');
@@ -689,5 +790,5 @@ h4{
             tenureElements.forEach(displayTenure);
         });
     </script>
-				</body>
-			</html>
+</body>
+</html>
